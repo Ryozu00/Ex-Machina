@@ -1,0 +1,20 @@
+Title : THE PREDATOR
+->	Proyek Neo Swarm Life kami menggunakan konsep pemangsa/predator.
+  
+->  Dalam proyek kami terdapat 2 jenis partikel yaitu pemangsa dan makanan(yang dimangsa). 
+  
+->  Terdapat 5 partikel pemangsa dan 100 partikel makanan serta ruang lingkup yang dapat dijangkau oleh partikel.
+  
+->  Partikel pemangsa akan mengejar partikel makanan yang jaraknya paling dekat dengannya dan sebaliknya partikel makanan 
+    akan lari menjahui partikel pemangsa. 
+  
+-> Semakin dekat jarak partikel makanan dengan partikel pemangsa makan akan semakin cepat pergerakannya
+   menjahui partikel pemangsa dan akan semakin pelan kecepatannya bila jaraknya semakin jauh dengan partikel pemangsa. 
+  
+-> Setiap partikel tidak dapat melebihi ruang lingkup yang dapat dijangkau dan bila partikel makanan menabrak ujung 
+   ruang linkup maka akan ada sedikit perbelokan sudut untuk menghindari terjadinya stuck.
+
+
+Jonathan K. 26415009
+Nicholas S. 26415040
+Vincent C. 26415069
