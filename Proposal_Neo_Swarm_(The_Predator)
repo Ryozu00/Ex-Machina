@@ -1,3 +1,4 @@
+
 Title : THE PREDATOR
 
 ->	Proyek Neo Swarm Life kami menggunakan konsep pemangsa/predator.
@@ -13,7 +14,17 @@ Title : THE PREDATOR
     menjahui partikel pemangsa dan akan semakin pelan kecepatannya bila jaraknya semakin jauh dengan partikel pemangsa. 
   
 ->  Setiap partikel tidak dapat melebihi ruang lingkup yang dapat dijangkau dan bila partikel makanan menabrak ujung 
-    ruang linkup maka akan ada sedikit perbelokan sudut untuk menghindari terjadinya stuck.
+    ruang lingkup maka akan ada sedikit perbelokan sudut untuk menghindari terjadinya stuck.
+
+-> Rule Pemangsa: 
+	-> Bergerak mendekati makanan terdekat.
+	-> Semakin dekat dengan makanan maka akan bergerak semakin cepat.
+	-> Tidak dapat bergerak melebihi ruang lingkup yang dihasilkan fungsi. Jika terkena batas akan berbelok.
+
+-> Rule Makanan:
+	-> Bergerak semakin menjauh dari pemangsa.
+	-> Apabila terkena collision dengan pemangsa akan menghilang.
+	-> Tidak dapat bergerak melebihi ruang lingkup yang dihasilkan fungsi. Jika terkena batas akan berbelok.
 
 
 Jonathan K. 26415009
