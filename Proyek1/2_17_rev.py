@@ -94,7 +94,12 @@ for t in range(tmax):
         # update velocity
         velocity[i] += c1 * np.random.rand() * (personal_best_position[i] - position[i]) \
                    + c2 * np.random.rand() * (predator_global_best_position - position[i])
-        position[i] -= velocity[i]
+        if (position[i][0] + velocity[i][0] > 3) or (position[i][0] + velocity[i][0] < -3):
+            velocity[i][0] *= -1
+			
+        if (position[i][1] +velocity[i][1] > 3) or (position[i][1] + velocity[i][1] < -3):
+            velocity[i][1] *= -1
+        position[i] += velocity[i]
 #Predators
     for i in range(predator_swarm):
         temp_x = position[0][1] - predator[i][1]
@@ -122,7 +127,12 @@ for t in range(tmax):
                    + c2 * np.random.rand()
         predator_velocity[i][1] += c1 * np.random.rand() * (predator_best_position[i][1] - temp_x) \
                    + c2 * np.random.rand()
-        predator[i] += predator_velocity[i]
+        if (predator[i][0] + predator_velocity[i][0] > 3) or (predator[i][0] + predator_velocity[i][0] < -3):
+            predator_velocity[i][0] *= -1
+        if (predator[i][1] + predator_velocity[i][1] > 3) or (predator[i][1] + predator_velocity[i][1] < -3):
+            predator_velocity[i][1] *= -1
+        predator[i][1] += predator_velocity[i][1]    
+        predator[i][0] += predator_velocity[i][0]
 #2D
     fig = plt.figure()
     CS = plt.contour(X, Y, Z, levels=levels, cmap=cm.gist_stern)
